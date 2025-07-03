@@ -1,6 +1,12 @@
 [package]
-name = "nocast_plugintemplate"
+name = "{{project-name}}"
 version = "0.1.0"
 edition = "2024"
+crate-type = ["cdylib"]
+
+[lib]
+name = "{{project-name}}"
+crate-type = ["cdylib"]
 
 [dependencies]
+nocast_plugincore = { git = "https://github.com/roger-padrell/nocast_plugincore" }

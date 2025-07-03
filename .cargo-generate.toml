@@ -1,0 +1,8 @@
+[template]
+name = "nocast-plugin"
+description = "A template for creating plugins for nocast."
+
+[placeholders]
+project-name = {type = "string", prompt = "Plugin name?"}
+author = {type = "string", prompt = "Plugin author/developer?"}
+license = {type = "string", prompt = "License for plugin (must be open-source)?", default = "MIT"}

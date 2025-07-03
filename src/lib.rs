@@ -1,14 +1,11 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+use nocast_plugincore::*;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[unsafe(no_mangle)]
+pub extern "C" fn sample(input: plugin_input) -> plugin_output {
+    let input_vec: Vec<String> = parse_input(input);
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+    let mut res: Vec<ActionOutput> = Vec::new();
+    res.push(ActionOutput {name: "some".to_string(), description: "thing".to_string(), target: "else,a".to_string()});
+
+    return prepare_output(res);
 }
