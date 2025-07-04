@@ -1,8 +1,12 @@
 [template]
 name = "nocast-plugin"
-description = "A template for creating plugins for nocast."
+cargo_generate_version = ">=0.10.0
 
-[placeholders]
-project-name = {type = "string", prompt = "Plugin name?", default = "awesome-plugin"}
-author = {type = "string", prompt = "Plugin author/developer?", default = "Darth Vader"}
-license = {type = "string", prompt = "License for plugin (must be open-source)?", default = "MIT"}
+[placeholders.license]
+type = "string"
+prompt = "License"
+default = "MIT"
+
+[placeholders.author]
+type = "string"
+prompt = "Author"
