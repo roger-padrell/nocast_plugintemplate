@@ -1,6 +1,6 @@
 [template]
 name = "nocast-plugin"
-cargo_generate_version = ">=0.10.0
+cargo_generate_version = ">=0.10.0"
 
 [placeholders.license]
 type = "string"
